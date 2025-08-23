@@ -54,10 +54,10 @@ AWS as part of the Cloud Engineering project.
 ## Deployment Links
 
 🔗 **S3 Static Website URL:**  
-[Static Website URL](http://cloudlaunch-site-awsbucket.s3-website-eu-west-1.amazonaws.com/)
+[http://cloudlaunch-site-awsbucket.s3-website-eu-west-1.amazonaws.com/](http://cloudlaunch-site-awsbucket.s3-website-eu-west-1.amazonaws.com/)
 
 🔗 **CloudFront Distribution URL:**  
-[CloudFront URL](https://d3m8fx0y8hc3dv.cloudfront.net/)
+[https://d3m8fx0y8hc3dv.cloudfront.net/](https://d3m8fx0y8hc3dv.cloudfront.net/)
 
 ---
 
