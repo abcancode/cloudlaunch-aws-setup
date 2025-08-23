@@ -5,12 +5,21 @@ AWS as part of the Cloud Engineering project.
 
 ---
 
+## Tools & Services Used
+
+- **AWS Services:** S3, CloudFront, VPC, IAM
+- **Tools:** AWS Management Console, JSON IAM Policies
+
+---
+
 ## Task 1: S3 Static Website Hosting
 
 - **Created an S3 bucket** named `cloudlaunch-site-awsbucket` (unique name in
   AWS).
 
 ![Cloudlaunch S3 Buckets](images/S3-buckets-created.png)
+
+- Disabled **Block Public Access** to allow public reads.
 
 - **Enabled static website hosting** in the bucket.
 
@@ -42,11 +51,13 @@ AWS as part of the Cloud Engineering project.
 
 - Configured **CloudFront** for content distribution.
 
-🔗 **S3 Static Website URL:**
-`http://cloudlaunch-site-awsbucket.s3-website-eu-west-1.amazonaws.com/`
+## Deployment Links
 
-🔗 **CloudFront Distribution URL:**
-`https://d3m8fx0y8hc3dv.cloudfront.net/`
+🔗 **S3 Static Website URL:**  
+[http://cloudlaunch-site-awsbucket.s3-website-eu-west-1.amazonaws.com/](http://cloudlaunch-site-awsbucket.s3-website-eu-west-1.amazonaws.com/)
+
+🔗 **CloudFront Distribution URL:**  
+[https://d3m8fx0y8hc3dv.cloudfront.net/](https://d3m8fx0y8hc3dv.cloudfront.net/)
 
 ---
 
@@ -161,3 +172,16 @@ The attached JSON policy is:
   ]
 }
 ```
+
+## Notes
+
+- CloudFront distribution was properly configured.
+- The S3 endpoint is guaranteed to serve the static website.
+- VPC setup is documented and functional, though actual EC2 instance testing was not required for this task.
+
+---
+
+## 👨‍💻 Author
+
+**Chidozie Ugwu**  
+Cloud Engineering Student @ AltSchool Africa 2025
