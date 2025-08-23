@@ -14,7 +14,7 @@ AWS as part of the Cloud Engineering project.
 
 - **Enabled static website hosting** in the bucket.
 
-![Cloudlaunch static website hosting enabled](images/static-webstie-hosting-enabled.png)
+![Cloudlaunch static website hosting enabled](images/static-website-hosting-enabled.png)
 
 - **Uploaded static HTML/CSS/JS files** for my static website.
 
@@ -40,12 +40,12 @@ AWS as part of the Cloud Engineering project.
 }
 ```
 
-- (Optional) Configured **CloudFront** for content distribution (if used).
+- Configured **CloudFront** for content distribution.
 
 🔗 **S3 Static Website URL:**
 `http://cloudlaunch-site-awsbucket.s3-website-eu-west-1.amazonaws.com/`
 
-🔗 **CloudFront Distribution URL (Optional):**
+🔗 **CloudFront Distribution URL:**
 `https://d3m8fx0y8hc3dv.cloudfront.net/`
 
 ---
