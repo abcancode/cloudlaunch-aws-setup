@@ -14,7 +14,7 @@ AWS as part of the Cloud Engineering project.
 
 - **Enabled static website hosting** in the bucket.
 
-![Cloudlaunch static website hosting enabled](images/static-website-hosting-enabled.png)
+![Cloudlaunch static website hosting enabled](images/static-hosting-enabled.png)
 
 - **Uploaded static HTML/CSS/JS files** for my static website.
 
