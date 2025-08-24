@@ -122,11 +122,6 @@ The attached JSON policy is:
   "Statement": [
     {
       "Effect": "Allow",
-      "Action": "s3:ListAllMyBuckets",
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
       "Action": ["s3:ListBucket"],
       "Resource": [
         "arn:aws:s3:::cloudlaunch-site-awsbucket",
@@ -137,15 +132,21 @@ The attached JSON policy is:
     {
       "Effect": "Allow",
       "Action": ["s3:GetObject"],
-      "Resource": [
-        "arn:aws:s3:::cloudlaunch-site-awsbucket/*",
-        "arn:aws:s3:::cloudlaunch-site-private-awsbucket/*"
-      ]
+      "Resource": ["arn:aws:s3:::cloudlaunch-site-awsbucket/*"]
     },
     {
       "Effect": "Allow",
-      "Action": ["s3:PutObject"],
+      "Action": ["s3:GetObject", "s3:PutObject"],
       "Resource": ["arn:aws:s3:::cloudlaunch-site-private-awsbucket/*"]
+    },
+    {
+      "Effect": "Deny",
+      "Action": ["s3:DeleteObject"],
+      "Resource": [
+        "arn:aws:s3:::cloudlaunch-site-awsbucket/*",
+        "arn:aws:s3:::cloudlaunch-site-private-awsbucket/*",
+        "arn:aws:s3:::cloudlaunch-site-visible-only-awsbucket/*"
+      ]
     }
   ]
 }
