@@ -118,37 +118,49 @@ The attached JSON policy is:
 
 ```json
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": ["s3:ListBucket"],
-      "Resource": [
-        "arn:aws:s3:::cloudlaunch-site-awsbucket",
-        "arn:aws:s3:::cloudlaunch-site-private-awsbucket",
-        "arn:aws:s3:::cloudlaunch-site-visible-only-awsbucket"
-      ]
-    },
-    {
-      "Effect": "Allow",
-      "Action": ["s3:GetObject"],
-      "Resource": ["arn:aws:s3:::cloudlaunch-site-awsbucket/*"]
-    },
-    {
-      "Effect": "Allow",
-      "Action": ["s3:GetObject", "s3:PutObject"],
-      "Resource": ["arn:aws:s3:::cloudlaunch-site-private-awsbucket/*"]
-    },
-    {
-      "Effect": "Deny",
-      "Action": ["s3:DeleteObject"],
-      "Resource": [
-        "arn:aws:s3:::cloudlaunch-site-awsbucket/*",
-        "arn:aws:s3:::cloudlaunch-site-private-awsbucket/*",
-        "arn:aws:s3:::cloudlaunch-site-visible-only-awsbucket/*"
-      ]
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "s3:ListAllMyBuckets",
+            "Resource": "arn:aws:s3:::*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "s3:ListBucket",
+            "Resource": [
+                "arn:aws:s3:::cloudlaunch-site-awsbucket",
+                "arn:aws:s3:::cloudlaunch-site-private-awsbucket",
+                "arn:aws:s3:::cloudlaunch-site-visible-only-awsbucket"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": "s3:GetObject",
+            "Resource": [
+                "arn:aws:s3:::cloudlaunch-site-awsbucket/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::cloudlaunch-site-private-awsbucket/*"
+            ]
+        },
+        {
+            "Effect": "Deny",
+            "Action": "s3:DeleteObject",
+            "Resource": [
+                "arn:aws:s3:::cloudlaunch-site-awsbucket/*",
+                "arn:aws:s3:::cloudlaunch-site-private-awsbucket/*",
+                "arn:aws:s3:::cloudlaunch-site-visible-only-awsbucket/*"
+            ]
+        }
+    ]
 }
 ```
 
